@@ -5,7 +5,7 @@ RUN chmod 777 /usr/src/app
 
 COPY test.txt .
 RUN pip3 install --upgrade setuptools wheel
-RUN pip3 install --no-cache-dir -r test.txt
+RUN pip3 install -v --no-cache-dir -r test.txt
 
 COPY . .
 
