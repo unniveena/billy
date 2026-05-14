@@ -5,6 +5,10 @@ RUN chmod 777 /usr/src/app
 
 COPY test.txt .
 RUN pip3 install --upgrade setuptools wheel
+
+RUN pip3 install vcs_versioning
+RUN pip3 install pymediainfo==6.1.0
+
 RUN pip3 install -v --no-cache-dir -r test.txt
 
 COPY . .
